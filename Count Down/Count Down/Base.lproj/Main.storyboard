@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Count_Down" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Down" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgc-Hv-dyj">
+                                <rect key="frame" x="246" y="28" width="109" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9C5-tM-SId">
+                                <rect key="frame" x="283" y="249" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FY-bh-2Vk">
+                                <rect key="frame" x="283" y="284" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="s5M-yd-Khx">
+                                <rect key="frame" x="0.0" y="68" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="435409955.251755">
+                                    <!--2014-10-19 11:12:35 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q0J-VH-t6j"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59e-xz-KBz">
+                                <rect key="frame" x="237" y="326" width="127" height="30"/>
+                                <state key="normal" title="Start Count Down!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startCountingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tvv-gm-LZz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="s5M-yd-Khx" secondAttribute="centerX" id="1f6-EH-oL7"/>
+                            <constraint firstItem="s5M-yd-Khx" firstAttribute="top" secondItem="Kgc-Hv-dyj" secondAttribute="bottom" constant="17" id="4L4-d1-hwn"/>
+                            <constraint firstAttribute="centerX" secondItem="9C5-tM-SId" secondAttribute="centerX" id="AcP-ch-IJo"/>
+                            <constraint firstItem="s5M-yd-Khx" firstAttribute="leading" secondItem="y3c-jy-aDJ" secondAttribute="leading" id="LIn-Mx-McS"/>
+                            <constraint firstItem="Kgc-Hv-dyj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Tlx-0e-Xrd"/>
+                            <constraint firstItem="59e-xz-KBz" firstAttribute="top" secondItem="3FY-bh-2Vk" secondAttribute="bottom" constant="21" id="WQv-rZ-GKA"/>
+                            <constraint firstItem="9C5-tM-SId" firstAttribute="top" secondItem="s5M-yd-Khx" secondAttribute="bottom" constant="19" id="ZW7-xN-5P8"/>
+                            <constraint firstAttribute="centerX" secondItem="59e-xz-KBz" secondAttribute="centerX" id="j7x-eA-JBu"/>
+                            <constraint firstAttribute="centerX" secondItem="3FY-bh-2Vk" secondAttribute="centerX" id="l81-O2-E4z"/>
+                            <constraint firstAttribute="centerX" secondItem="Kgc-Hv-dyj" secondAttribute="centerX" constant="-0.5" id="pMa-56-uY5"/>
+                            <constraint firstItem="3FY-bh-2Vk" firstAttribute="top" secondItem="9C5-tM-SId" secondAttribute="bottom" constant="14" id="x4Y-zO-Y4r"/>
+                            <constraint firstItem="s5M-yd-Khx" firstAttribute="trailing" secondItem="y3c-jy-aDJ" secondAttribute="trailing" id="zYb-wF-8ZM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="9C5-tM-SId" id="Jm4-l7-0dI"/>
+                        <outlet property="datePickerLabel" destination="s5M-yd-Khx" id="2tc-Sd-Mym"/>
+                        <outlet property="timeLabel" destination="3FY-bh-2Vk" id="D4u-OA-r1b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
